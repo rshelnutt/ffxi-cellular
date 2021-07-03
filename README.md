@@ -1,7 +1,7 @@
 # ffxi-cellular
 
 -------------------------------------------
-Cellular v1.0.0 -- Author: Blace of Ifrit 
+Cellular v1.0.0 -- Blace of Ifrit 
 -------------------------------------------
 WIP VoidWatch bulk cell purchaser for Windower 4. Currently only works in Southern Sandoria, other NPCs will be added soon
 
