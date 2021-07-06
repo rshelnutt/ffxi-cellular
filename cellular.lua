@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 _addon.name     = 'cellular'
 _addon.author   = 'Blace'
-_addon.version  = '1.0.0'
+_addon.version  = '1.1.0'
 _addon.commands = {'vwc'}
 
 require('coroutine')
@@ -39,14 +39,14 @@ require('logger')
 
 local help_text = [[
 -----------------------------------------------------------
-Cellular v1.0.0 -- Author: Blace of Ifrit (gh:rshelnutt)
+Cellular v1.0.0 -- Author: Regatz@Odin (Blace@Ifrit) GH:rshelnutt
 -----------------------------------------------------------
     Submit an issue on GitHub if you have any problems. 
     This script is a wip and is provided as-is.
     This is an automated purchasing tool that uses packet injection;
     use at your own risk (however minor it may be).
      
-    //vwc buy(b) {Rubicund(r), Cobalt(c)} {number}
+    //vwc buy(b) {number} {Rubicund(r), Cobalt(c)}
     //vwc b c 17
     //vwc buy Rubicund 42
 ]]
@@ -186,7 +186,7 @@ local function process_queue()
     end
 end
 
-local function handle_buy(item, count)
+local function handle_buy(count, item)
     local mob, npc = validate(vw_npcs)
     if npc then
         if conditions['buy'] then
