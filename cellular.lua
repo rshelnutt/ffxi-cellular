@@ -47,8 +47,8 @@ Cellular v1.0.0 -- Author: Regatz@Odin (Blace@Ifrit) GH:rshelnutt
     use at your own risk (however minor it may be).
      
     //vwc buy(b) {number} {Rubicund(r), Cobalt(c)}
-    //vwc b c 17
-    //vwc buy Rubicund 42
+    //vwc b 200 r
+    //vwc buy 42 Rubicund
 ]]
 
 local packets = require('packets')
@@ -217,7 +217,7 @@ local function handle_buy(count, item)
                     cellType = "Cobalt"
                 end
 
-                notice("!!! DO NOT MOVE !!! - Purchasing %d %s %s from NPC, please wait...":format(count, cellType, cellText))
+                notice("DO NOT MOVE !!! - Purchasing %d %s %s from NPC, please wait...":format(count, cellType, cellText))
             else
                 return "Invalid cell type: %s":format(item)
             end
